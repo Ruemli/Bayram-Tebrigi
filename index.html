@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bayram Tebrikleri</title>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        .greeting {
+            background-color: #4CAF50;
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .message {
+            font-size: 20px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        .ornament {
+            font-size: 50px;
+            margin: 20px 0;
+        }
+        .button {
+            background-color: #FFC107;
+            color: #333;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #FFD54F;
+        }
+        .hidden {
+            display: none;
+        }
+        .joke {
+            background-color: #FF5722;
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .final {
+            background-color: #3F51B5;
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-top: 30px;
+        }
+        .credit {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            font-size: 12px;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="greeting" class="greeting">
+            <div class="ornament">🌙 ✨</div>
+            <h1>Bayramınız Mübarek Olsun</h1>
+            <div class="message">
+                <p>Bu mübarek Ramazan Bayramı'nın 3. gününde size ve sevdiklerinize sağlık, mutluluk ve huzur diliyorum.</p>
+                <p>Bayramınızı en içten dileklerimle kutlarım.</p>
+            </div>
+            <button id="showMore" class="button">Özel Bayram Mesajımı Göster</button>
+        </div>
+        
+        <div id="joke" class="joke hidden">
+            <div class="ornament">😜 🎉</div>
+            <h1>ŞAKALANDIN!</h1>
+            <div class="message">
+                <p>1 Nisan şakası!</p>
+                <p>Aslında bayramda da şaka yapılır mı? Yapılır tabii, bugün 1 Nisan!</p>
+            </div>
+            <button id="showFinal" class="button">Gerçek Mesajımı Göster</button>
+        </div>
+        
+        <div id="final" class="final hidden">
+            <div class="ornament">🌙 😊</div>
+            <h1>Hem Bayramını Hem 1 Nisan'ını Kutlarım!</h1>
+            <div class="message">
+                <p>Ramazan Bayramı'nın bereketi ve 1 Nisan'ın neşesi seninle olsun!</p>
+                <p>Bu özel günde tebessümün hiç eksik olmasın.</p>
+                <p>Bayramın mübarek olsun!</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="credit">Kerem Vapur tarafından hazırlandı.</div>
+    
+    <script>
+        document.getElementById('showMore').addEventListener('click', function() {
+            document.getElementById('greeting').classList.add('hidden');
+            document.getElementById('joke').classList.remove('hidden');
+        });
+        
+        document.getElementById('showFinal').addEventListener('click', function() {
+            document.getElementById('joke').classList.add('hidden');
+            document.getElementById('final').classList.remove('hidden');
+        });
+    </script>
+</body>
+</html>
